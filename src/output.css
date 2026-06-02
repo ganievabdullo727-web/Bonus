@@ -350,6 +350,9 @@
   .hidden {
     display: none;
   }
+  .table {
+    display: table;
+  }
   .h-100 {
     height: calc(var(--spacing) * 100);
   }
@@ -593,6 +596,12 @@
   .max-w-300 {
     max-width: calc(var(--spacing) * 300);
   }
+  .border-collapse {
+    border-collapse: collapse;
+  }
+  .resize {
+    resize: both;
+  }
   .flex-col {
     flex-direction: column;
   }
@@ -634,6 +643,10 @@
   }
   .gap-\[35px\] {
     gap: 35px;
+  }
+  .border {
+    border-style: var(--tw-border-style);
+    border-width: 1px;
   }
   .border-1 {
     border-style: var(--tw-border-style);
@@ -774,6 +787,9 @@
     --tw-font-weight: var(--font-weight-bold);
     font-weight: var(--font-weight-bold);
   }
+  .text-wrap {
+    text-wrap: wrap;
+  }
   .text-\[\#FEAD04\] {
     color: #FEAD04;
   }
@@ -801,6 +817,9 @@
   .text-\[yellow\] {
     color: yellow;
   }
+  .underline {
+    text-decoration-line: underline;
+  }
   .shadow-\[0px_0px_1px\] {
     --tw-shadow: 0px 0px 1px var(--tw-shadow-color, currentcolor);
     box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
@@ -816,6 +835,10 @@
   .shadow-\[0px_0px_\] {
     --tw-shadow: 0px 0px var(--tw-shadow-color, currentcolor);
     box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+  }
+  .outline {
+    outline-style: var(--tw-outline-style);
+    outline-width: 1px;
   }
   .lg\:m-0 {
     @media (width >= 64rem) {
@@ -1194,6 +1217,11 @@
   inherits: false;
   initial-value: 0 0 #0000;
 }
+@property --tw-outline-style {
+  syntax: "*";
+  inherits: false;
+  initial-value: solid;
+}
 @layer properties {
   @supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {
     *, ::before, ::after, ::backdrop {
@@ -1213,6 +1241,7 @@
       --tw-ring-offset-width: 0px;
       --tw-ring-offset-color: #fff;
       --tw-ring-offset-shadow: 0 0 #0000;
+      --tw-outline-style: solid;
     }
   }
 }
